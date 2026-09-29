@@ -1,0 +1,306 @@
+/* ============================================================================
+   ESTILOS DEDICADOS AL CATÁLOGO PÚBLICO - PAMELA JD
+   ============================================================================ */
+
+/* Banner Hero */
+.catalog-hero {
+    background-color: var(--black-bg, #121212);
+    color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 3px solid var(--pink-primary, #f8bfae);
+}
+
+.catalog-hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: var(--pink-primary, #f8bfae);
+}
+
+.catalog-hero-content p {
+    color: #cccccc;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Layout del Catálogo (Sidebar + Grid) */
+.catalog-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 30px;
+}
+
+/* Sidebar de Filtros */
+.filters-sidebar {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    height: fit-content;
+}
+
+.filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.filter-header h3 {
+    font-size: 1.2rem;
+    color: #121212;
+}
+
+.btn-text {
+    background: none;
+    border: none;
+    color: #888888;
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-decoration: underline;
+}
+
+.filter-group {
+    margin-bottom: 25px;
+}
+
+.filter-group label, .filter-group h4 {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333333;
+}
+
+.form-input, .form-select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    outline: none;
+}
+
+.form-input:focus, .form-select:focus {
+    border-color: var(--pink-primary, #f8bfae);
+}
+
+/* Checkboxes Personalizados */
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+/* Botones de Selección de Talla */
+.size-selector {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.size-btn {
+    padding: 8px;
+    border: 1px solid #dddddd;
+    background: #ffffff;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.size-btn:hover, .size-btn.active {
+    background: var(--black-bg, #121212);
+    color: var(--pink-primary, #f8bfae);
+    border-color: var(--black-bg, #121212);
+}
+
+/* Selector de Color */
+.color-options {
+    display: flex;
+    gap: 12px;
+}
+
+.color-dot {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #dddddd;
+    transition: transform 0.2s ease;
+}
+
+.color-dot:hover, .color-dot.active {
+    transform: scale(1.2);
+    border-color: var(--black-bg, #121212);
+}
+
+.color-dot.black { background-color: #000000; }
+.color-dot.pink { background-color: #f8bfae; }
+.color-dot.white { background-color: #ffffff; }
+.color-dot.nude { background-color: #e3bc9a; }
+
+.btn-block {
+    width: 100%;
+}
+
+/* Cabecera de Lista de Productos */
+.products-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.results-count {
+    font-size: 0.95rem;
+    color: #666666;
+}
+
+.sort-by {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Rejilla de Tarjetas de Producto */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.product-card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Badges de Disponibilidad */
+.product-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    z-index: 2;
+}
+
+.badge-stock { background: #d4edda; color: #155724; }
+.badge-low { background: #fff3cd; color: #856404; }
+.badge-out { background: #f8d7da; color: #721c24; }
+
+/* Wrapper de Imagen y Efecto Overlay */
+.product-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    background: #f4f4f6;
+    overflow: hidden;
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.08);
+}
+
+.product-actions-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.product-card:hover .product-actions-overlay {
+    opacity: 1;
+}
+
+/* Información del Calzado */
+.product-info {
+    padding: 18px;
+}
+
+.product-ref {
+    font-size: 0.75rem;
+    color: #888888;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.product-title {
+    font-size: 1.05rem;
+    color: #121212;
+    margin: 4px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-category {
+    font-size: 0.85rem;
+    color: #666666;
+    margin-bottom: 12px;
+}
+
+.product-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 12px;
+}
+
+.product-price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #121212;
+}
+
+.product-sizes {
+    font-size: 0.8rem;
+    color: #777777;
+}
+
+/* Responsividad */
+@media (max-width: 900px) {
+    .catalog-container {
+        grid-template-columns: 1fr;
+    }
+    .filters-sidebar {
+        margin-bottom: 20px;
+    }
+}

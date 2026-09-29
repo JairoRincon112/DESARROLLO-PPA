@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catálogo Exclusivo de Calzado - PAMELA JD">
+    <title>Catálogo de Calzado | PAMELA JD</title>
+    <!-- Vinculación a la misma hoja de estilos global -->
+    <link rel="stylesheet" href="principal.css">
+</head>
+<body>
+
+    <!-- 1. ENCABEZADO Y NAVEGACIÓN PRINCIPAL (IGUAL AL INDEX) -->
+    <header>
+        <div class="logo-container">
+            <img src="img/pamela.png" alt="Logo Pamela J.D" class="logo-img">
+            <div>
+                <h1>PAMELA JD</h1>
+                <p>Sistema de Gestión y Control de Inventario</p>
+            </div>
+        </div>
+        
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html#inicio">Inicio</a></li>
+                <li><a href="catalogo.html" class="active nav-catalog-link">Catálogo</a></li>
+                <li><a href="index.html#modulos">Módulos</a></li>
+                <li><a href="index.html#empresa">Empresa</a></li>
+                <li><a href="login.html">Acceso</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 2. CONTENIDO PRINCIPAL DEL CATÁLOGO -->
+    <main>
+        
+        <!-- Encabezado del Catálogo -->
+        <section class="hero-section">
+            <div class="hero-card">
+                <h2>Catálogo <span class="title-underline">Exclusivo de Calzado</span></h2>
+                <p>Explora nuestras referencias en tendencia, selecciona tu talla ideal y consulta disponibilidad en fábrica.</p>
+            </div>
+        </section>
+
+        <!-- Galería / Grilla de Productos -->
+        <section class="content-section">
+            <div class="modules-grid">
+                
+                <!-- Producto 1 -->
+                <article class="module-card">
+                    <div style="width: 100%; height: 180px; background-color: #f0f0f0; border-radius: 8px; margin-bottom: 15px; display: flex; align-items: center; justify-content: center; color: #888;">
+                        <span>Imagen del Producto</span>
+                    </div>
+                    <h3>Calzado Deportivo Dama</h3>
+                    <p>Diseño ergonómico y liviano ideal para uso diario. Colores variados.</p>
+                    <p style="font-weight: bold; margin-top: 10px; color: var(--dark-bg);">$120.000 COP</p>
+                </article>
+
+                <!-- Producto 2 -->
+                <article class="module-card">
+                    <div style="width: 100%; height: 180px; background-color: #f0f0f0; border-radius: 8px; margin-bottom: 15px; display: flex; align-items: center; justify-content: center; color: #888;">
+                        <span>Imagen del Producto</span>
+                    </div>
+                    <h3>Zapato Casual Urbano</h3>
+                    <p>Fabricado en sintético de alta resistencia con suela antideslizante.</p>
+                    <p style="font-weight: bold; margin-top: 10px; color: var(--dark-bg);">$145.000 COP</p>
+                </article>
+
+                <!-- Producto 3 -->
+                <article class="module-card">
+                    <div style="width: 100%; height: 180px; background-color: #f0f0f0; border-radius: 8px; margin-bottom: 15px; display: flex; align-items: center; justify-content: center; color: #888;">
+                        <span>Imagen del Producto</span>
+                    </div>
+                    <h3>Sandalia Formal Premium</h3>
+                    <p>Acabado elegante con detalles cosidos a mano. Disponible en todas las tallas.</p>
+                    <p style="font-weight: bold; margin-top: 10px; color: var(--dark-bg);">$98.000 COP</p>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 3. PIE DE PÁGINA Y NAVEGACIÓN SECUNDARIA -->
+    <footer id="contacto">
+        <div class="footer-container">
+            <div class="footer-grid">
+                
+                <!-- Columna 1: Marca -->
+                <div class="footer-col brand-col">
+                    <h3>PAMELA JD</h3>
+                    <p class="footer-desc">Tecnología aplicada a la gestión eficiente de calzado.</p>
+                    <p class="copyright">&copy; 2026 PAMELA JD. Todos los derechos reservados.</p>
+                </div>
+
+                <!-- Columna 2: Enlaces Rápidos -->
+                <nav aria-label="Navegación del pie de página" class="footer-col links-col">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html#inicio">Inicio</a></li>
+                        <li><a href="catalogo.html">Catálogo Público</a></li>
+                        <li><a href="index.html#modulos">Módulos del Sistema</a></li>
+                        <li><a href="login.html">Acceso Administrativo</a></li>
+                        <li><a href="index.html#empresa">Acerca de la Empresa</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Columna 3: Boletín -->
+                <div class="footer-col newsletter-col">
+                    <h3>Suscripción al Boletín</h3>
+                    <form action="#" method="post" class="newsletter-form">
+                        <label for="email-boletin">Ingrese su correo para recibir novedades:</label>
+                        <div class="input-group">
+                            <input type="email" id="email-boletin" name="email" placeholder="correo@ejemplo.com" required>
+                            <button type="submit">Suscribirse</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
