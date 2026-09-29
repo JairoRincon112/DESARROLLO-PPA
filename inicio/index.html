@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PAMELA JD - Sistema Interno de Gestión, Control de Inventario y Ventas de Calzado">
+    <title>PAMELA JD | Sistema de Gestión Interna</title>
+    <!-- Vinculación a la hoja de estilos externa -->
+    <link rel="stylesheet" href="principal.css">
+</head>
+<body>
+
+    <!-- 1. CAPA DE ENCABEZADO Y NAVEGACIÓN PRINCIPAL -->
+    <header>
+        <div class="logo-container">
+            <img src="img/pamela.png" alt="Logo Pamela J.D" class="logo-img">
+            <div>
+                <h1>PAMELA JD</h1>
+                <p>Sistema de Gestión y Control de Inventario</p>
+            </div>
+        </div>
+        
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#multimedia">Demostración</a></li>
+                <li><a href="#modulos">Módulos</a></li>
+                <li><a href="#empresa">Empresa</a></li>
+                <!-- Enlace de redirección a la página externa de Login -->
+                <li><a href="login.html">Acceso</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 2. NÚCLEO PRINCIPAL DE LA APLICACIÓN -->
+    <main>
+
+        <!-- Sección de Héroe / Bienvenida del Sistema Interno -->
+        <section id="inicio">
+            <h2>Plataforma Integral de Gestión y Ventas</h2>
+            <p>Optimizamos la administración interna de PAMELA JD con control en tiempo real, trazabilidad de stock de calzado y reportes analíticos para la toma de decisiones estratégicas.</p>
+            <div class="hero-actions">
+                <a href="#modulos" class="btn">Explorar Módulos</a>
+                <!-- Botón con redirección directa a la página independiente login.html -->
+                <a href="login.html" class="btn btn-secondary">Iniciar Sesión / Acceso</a>
+            </div>
+        </section>
+
+        <!-- Sección Multimedia (Figure + Figcaption) -->
+        <section id="multimedia">
+            <h2>Demostración del Sistema</h2>
+            <p>Vea en acción la interfaz de punto de venta y gestión de inventario en vivo.</p>
+            
+            <figure>
+                <video controls poster="imgs/thumbnail-demo.jpg">
+                    <source src="assets/demostracion-pamela.mp4" type="video/mp4">
+                    Su navegador no soporta la reproducción de video HTML5.
+                </video>
+                <figcaption>...</figcaption>
+            </figure>
+        </section>
+
+        <!-- Sección de Módulos (Grid de Articles) -->
+        <section id="modulos">
+            <h2>Módulos del Sistema</h2>
+            
+            <article>
+                <h3>Control de Inventario</h3>
+                <p>Monitoreo automático de stock por modelo, talla y color. Alertas de reabastecimiento en tiempo real.</p>
+            </article>
+
+            <article>
+                <h3>Punto de Venta (POS)</h3>
+                <p>Facturación rápida, procesamiento de múltiples métodos de pago e impresión/emisión de comprobantes.</p>
+            </article>
+
+            <article>
+                <h3>Gestión de Clientes</h3>
+                <p>Historial de compras, programa de fidelización y seguimiento personalizado para maximizar ventas.</p>
+            </article>
+
+            <article>
+                <h3>Reportes Analíticos</h3>
+                <p>Métricas detalladas sobre productos más vendidos, márgenes de ganancia y rendimiento por periodo.</p>
+            </article>
+        </section>
+
+        <!-- Contenido Complementario (Aside) -->
+        <aside id="empresa">
+            <h2>Acerca de PAMELA JD</h2>
+            <p>PAMELA JD es una solución tecnológica desarrollada con estándares modernos de ingeniería web, enfocada en resolver la complejidad logística del sector del calzado.</p>
+        </aside>
+
+    </main>
+
+    <!-- 3. PIE DE PÁGINA Y NAVEGACIÓN SECUNDARIA -->
+    <footer id="contacto">
+        <div>
+            <h3>PAMELA JD</h3>
+            <p>Tecnología aplicada a la gestión eficiente de calzado.</p>
+            <p>&copy; 2026 PAMELA JD. Todos los derechos reservados.</p>
+        </div>
+
+        <nav aria-label="Navegación del pie de página">
+            <h3>Enlaces Rápidos</h3>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#modulos">Módulos del Sistema</a></li>
+                <li><a href="login.html">Acceso Administrativo</a></li>
+                <li><a href="#empresa">Acerca de la Empresa</a></li>
+            </ul>
+        </nav>
+
+        <div>
+            <h3>Suscripción al Boletín</h3>
+            <form action="#" method="post">
+                <label for="email-boletin">Ingrese su correo para recibir novedades:</label>
+                <input type="email" id="email-boletin" name="email" placeholder="correo@ejemplo.com" required>
+                <button type="submit">Suscribirse</button>
+            </form>
+        </div>
+    </footer>
+
+</body>
+</html>
