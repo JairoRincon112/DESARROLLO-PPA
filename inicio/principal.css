@@ -41,7 +41,7 @@ body {
 }
 
 main {
-    flex: 1 0 auto; /* Asegura que el footer siempre se mantenga al final */
+    flex: 1 0 auto;
     width: 100%;
 }
 
@@ -87,33 +87,41 @@ header {
 header nav ul {
     display: flex;
     list-style: none;
-    gap: 15px;
+    gap: 12px;
     align-items: center;
 }
 
+/* Estilo base de los botones del menú */
 header nav a {
     color: var(--text-light);
     text-decoration: none;
     font-size: 0.9rem;
-    font-weight: 500;
-    padding: 6px 14px;
-    border-radius: 20px;
-    transition: var(--transition);
-}
-
-header nav a:hover, header nav a.active {
-    background-color: rgba(255, 255, 255, 0.15);
-}
-
-header nav a.nav-catalog-link {
-    color: var(--pink-accent);
-    border: 1px solid var(--pink-accent);
     font-weight: 600;
+    padding: 8px 18px;
+    border-radius: var(--radius-pill);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.05);
+    transition: var(--transition);
+    display: inline-block;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
-header nav a.nav-catalog-link:hover {
-    background-color: var(--pink-accent);
-    color: var(--dark-bg);
+/* Cambio de color SOLO en Hover o cuando la clase .active está presente en HTML */
+header nav a:hover, 
+header nav a.active {
+    color: var(--pink-accent);
+    border-color: var(--pink-accent);
+    background-color: rgba(248, 191, 174, 0.1);
+    transform: translateY(-1px);
+}
+
+/* Evita que el estado de foco retenido por el navegador mantenga el color rosado */
+header nav a:focus:not(:hover):not(.active) {
+    color: var(--text-light);
+    border-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.05);
+    transform: none;
 }
 
 /* --- SECCIÓN HERO --- */
@@ -311,10 +319,7 @@ figcaption {
     text-align: center;
 }
 
-/* ============================================================================
-   SECCIÓN COMPLETA DEL FOOTER (UNIFICADA Y CORREGIDA)
-   ============================================================================ */
-
+/* --- FOOTER --- */
 footer {
     flex-shrink: 0;
     background-color: var(--dark-bg);
@@ -327,7 +332,6 @@ footer {
     clear: both;
 }
 
-/* Contenedor y estructura de grilla */
 .footer-container {
     max-width: 1100px;
     margin: 0 auto;
@@ -367,14 +371,13 @@ footer {
     margin-top: 10px;
 }
 
-/* --- SOLUCIÓN AL ESCALONADO DE ENLACES --- */
 .footer-col ul {
     list-style: none !important;
     padding: 0 !important;
     margin: 0 !important;
     display: flex !important;
-    flex-direction: column !important; /* Fuerza una lista vertical limpia */
-    gap: 10px !important;              /* Espaciado constante entre elementos */
+    flex-direction: column !important;
+    gap: 10px !important;
     align-items: flex-start !important;
 }
 
@@ -382,7 +385,7 @@ footer {
     margin: 0 !important;
     padding: 0 !important;
     display: block !important;
-    float: none !important;           /* Desactiva cualquier flotado conflictivo */
+    float: none !important;
     width: 100%;
 }
 
@@ -399,7 +402,6 @@ footer {
     transform: translateX(4px);
 }
 
-/* --- FORMULARIO Y BOLETÍN --- */
 .newsletter-form label {
     display: block;
     font-size: 0.88rem;
@@ -482,7 +484,7 @@ footer {
     }
 
     .footer-col ul {
-        align-items: center !important; /* Centra la lista en celulares */
+        align-items: center !important;
     }
 
     .newsletter-col {
