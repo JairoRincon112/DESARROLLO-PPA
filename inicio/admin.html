@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - Pamela JD</title>
+    <link rel="stylesheet" href="principal.css">
+</head>
+<body>
+
+    <!-- HEADER / NAVEGACIÓN ADMINISTRADOR -->
+    <header>
+        <div class="logo-container">
+            <img src="img/pamela.png" alt="Logo Pamela JD" class="logo-img">
+            <div>
+                <h1>PAMELA JD</h1>
+                <p>Panel de Administración</p>
+            </div>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#dashboard" class="nav-link">Dashboard</a></li>
+                <li><a href="#inventario" class="nav-link">Inventario</a></li>
+                <li><a href="#usuarios" class="nav-link">Usuarios / Vendedores</a></li>
+                <li><a href="#reportes" class="nav-link">Reportes</a></li>
+                <li><a href="#configuracion" class="nav-link">Configuración</a></li>
+            </ul>
+        </nav>
+
+        <!-- ÁREA DE PERFIL CON MENÚ DESPLEGABLE -->
+        <div class="user-menu-wrapper">
+            <div class="user-profile" id="userMenuToggle">
+                <div class="user-info">
+                    <span class="user-name">Administrador</span>
+                    <span class="user-badge badge-admin">Admin</span>
+                </div>
+                <div class="user-avatar">
+                    <img src="avatar-admin.jpg" alt="Administrador">
+                </div>
+            </div>
+
+            <!-- Menú Desplegable (Dropdown) -->
+            <div class="dropdown-menu" id="userDropdown">
+                <div class="dropdown-header">
+                    <p class="user-full-name">Jairo Rincón</p>
+                    <p class="user-email">admin@pamelajd.com</p>
+                </div>
+                <hr class="dropdown-divider">
+                <a href="#perfil" class="dropdown-item">Mi Perfil</a>
+                <a href="#configuracion" class="dropdown-item">Ajustes</a>
+                <hr class="dropdown-divider">
+                <a href="index.html" class="dropdown-item logout-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                        <polyline points="16 17 21 12 16 7"></polyline>
+                        <line x1="21" y1="12" x2="9" y2="12"></line>
+                    </svg>
+                    Cerrar Sesión
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="admin-container">
+        
+        <!-- DASHBOARD / MÉTRICAS GLOBALES -->
+        <section id="dashboard" class="admin-section">
+            <div class="section-header">
+                <h2>Métricas Generales</h2>
+                <p>Resumen del rendimiento global del sistema de ventas e inventario.</p>
+            </div>
+
+            <div class="dashboard-metrics">
+                <div class="metric-card">
+                    <h4>Ventas Totales (Mes)</h4>
+                    <p class="metric-value">$ 12.450.000</p>
+                    <span class="metric-sub">+12% respecto al mes anterior</span>
+                </div>
+                <div class="metric-card">
+                    <h4>Stock Crítico</h4>
+                    <p class="metric-value">4 Productos</p>
+                    <span class="metric-sub status-danger">Requieren reabastecimiento</span>
+                </div>
+                <div class="metric-card">
+                    <h4>Vendedores Activos</h4>
+                    <p class="metric-value">8</p>
+                    <span class="metric-sub">En turno hoy</span>
+                </div>
+                <div class="metric-card">
+                    <h4>Pedidos del Día</h4>
+                    <p class="metric-value">34</p>
+                    <span class="metric-sub">En proceso de despacho</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: INVENTARIO -->
+        <section id="inventario" class="admin-section">
+            <div class="section-header flex-between">
+                <div>
+                    <h2>Gestión de Inventario</h2>
+                    <p>Administra los productos, existencias y precios.</p>
+                </div>
+                <button class="btn btn-primary">+ Nuevo Producto</button>
+            </div>
+            
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Producto</th>
+                            <th>Categoría</th>
+                            <th>Precio Unitario</th>
+                            <th>Stock</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#PRD-001</td>
+                            <td>Vestido Noche Rosa</td>
+                            <td>Vestidos</td>
+                            <td>$ 120.000</td>
+                            <td>15 unidades</td>
+                            <td><span class="status-badge status-success">Disponible</span></td>
+                            <td>
+                                <button class="btn-action">Editar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#PRD-002</td>
+                            <td>Blusa Satinada</td>
+                            <td>Blusas</td>
+                            <td>$ 65.000</td>
+                            <td>2 unidades</td>
+                            <td><span class="status-badge status-danger">Bajo Stock</span></td>
+                            <td>
+                                <button class="btn-action">Editar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: USUARIOS / VENDEDORES -->
+        <section id="usuarios" class="admin-section">
+            <div class="section-header flex-between">
+                <div>
+                    <h2>Gestión de Usuarios / Vendedores</h2>
+                    <p>Administra los accesos y roles del personal de ventas.</p>
+                </div>
+                <button class="btn btn-primary">+ Registrar Vendedor</button>
+            </div>
+
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Correo Electrónico</th>
+                            <th>Rol</th>
+                            <th>Ventas del Mes</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#USR-101</td>
+                            <td>Jairo Rincón</td>
+                            <td>vendedor@pamelajd.com</td>
+                            <td>Vendedor</td>
+                            <td>$ 2.450.000</td>
+                            <td><span class="status-badge status-success">Activo</span></td>
+                            <td>
+                                <button class="btn-action">Editar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#USR-102</td>
+                            <td>María Pérez</td>
+                            <td>maria@pamelajd.com</td>
+                            <td>Vendedor</td>
+                            <td>$ 1.890.000</td>
+                            <td><span class="status-badge status-success">Activo</span></td>
+                            <td>
+                                <button class="btn-action">Editar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: REPORTES -->
+        <section id="reportes" class="admin-section">
+            <div class="section-header">
+                <h2>Reportes y Analítica</h2>
+                <p>Genera informes de ventas, rendimiento por vendedor e inventario.</p>
+            </div>
+            <div class="reports-grid">
+                <div class="report-card">
+                    <h4>Reporte de Ventas</h4>
+                    <p>Exporta el consolidado de ventas diarias, semanales o mensuales.</p>
+                    <button class="btn btn-secondary btn-sm">Descargar CSV / PDF</button>
+                </div>
+                <div class="report-card">
+                    <h4>Rendimiento de Vendedores</h4>
+                    <p>Analiza el cumplimiento de metas y comisiones generadas.</p>
+                    <button class="btn btn-secondary btn-sm">Ver Informe</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SCRIPT PARA INTERACCIONES Y NAVEGACIÓN -->
+    <script>
+        // Toggle Menú Desplegable de Usuario
+        const userMenuToggle = document.getElementById('userMenuToggle');
+        const userDropdown = document.getElementById('userDropdown');
+
+        userMenuToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            userDropdown.classList.toggle('show');
+        });
+
+        // Cerrar menú desplegable al hacer clic en cualquier otra parte
+        document.addEventListener('click', () => {
+            if (userDropdown.classList.contains('show')) {
+                userDropdown.classList.remove('show');
+            }
+        });
+
+        // Quitar foco visual de los enlaces del nav al hacer clic
+        document.querySelectorAll('header nav a').forEach(link => {
+            link.addEventListener('click', function() {
+                this.blur();
+            });
+        });
+
+        // Limpieza de datos al Cerrar Sesión
+        const logoutBtn = document.querySelector('.logout-item');
+        if (logoutBtn) {
+            logoutBtn.addEventListener('click', function() {
+                localStorage.clear();
+                sessionStorage.clear();
+            });
+        }
+    </script>
+</body>
+</html>

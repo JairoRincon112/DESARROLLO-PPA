@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Vendedor - Pamela JD</title>
+    <link rel="stylesheet" href="principal.css">
+</head>
+<body>
+
+    <!-- HEADER / NAVEGACIÓN VENDEDOR -->
+    <header>
+        <div class="logo-container">
+            <img src="img/pamela.png" alt="Logo Pamela JD" class="logo-img">
+            <div>
+                <h1>PAMELA JD</h1>
+                <p>Panel de Ventas</p>
+            </div>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#catalogo" class="nav-link">Catálogo</a></li>
+                <li><a href="#nuevo-pedido" class="nav-link">Nuevo Pedido</a></li>
+                <li><a href="#mis-ventas" class="nav-link">Mis Ventas</a></li>
+                <li><a href="#clientes" class="nav-link">Clientes</a></li>
+            </ul>
+        </nav>
+
+        <!-- ÁREA DE PERFIL CON MENÚ DESPLEGABLE -->
+        <div class="user-menu-wrapper">
+            <div class="user-profile" id="userMenuToggle">
+                <div class="user-info">
+                    <span class="user-name">Jairo Rincón</span>
+                    <span class="user-badge badge-seller">Vendedor</span>
+                </div>
+                <div class="user-avatar">
+                    <img src="img/avatar.png" alt="Vendedor">
+                </div>
+            </div>
+
+            <!-- Menú Desplegable (Dropdown) -->
+            <div class="dropdown-menu" id="userDropdown">
+                <div class="dropdown-header">
+                    <p class="user-full-name">Jairo Rincón</p>
+                    <p class="user-email">vendedor@pamelajd.com</p>
+                </div>
+                <hr class="dropdown-divider">
+                <a href="#perfil" class="dropdown-item">Mi Perfil</a>
+                <!-- REDIRECCIÓN CORREGIDA A INDEX.HTML -->
+                <a href="index.html" class="dropdown-item logout-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                        <polyline points="16 17 21 12 16 7"></polyline>
+                        <line x1="21" y1="12" x2="9" y2="12"></line>
+                    </svg>
+                    Cerrar Sesión
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="vendedor-container">
+        
+        <!-- RESUMEN / MÉTRICAS RÁPIDAS DEL VENDEDOR -->
+        <section class="dashboard-metrics">
+            <div class="metric-card">
+                <h4>Ventas de Hoy</h4>
+                <p class="metric-value">$ 450.000</p>
+                <span class="metric-sub">5 pedidos realizados</span>
+            </div>
+            <div class="metric-card">
+                <h4>Comisión del Mes</h4>
+                <p class="metric-value">$ 180.000</p>
+                <span class="metric-sub">Meta: 85% completada</span>
+            </div>
+            <div class="metric-card">
+                <h4>Pedidos Pendientes</h4>
+                <p class="metric-value">2</p>
+                <span class="metric-sub">Por entregar</span>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: NUEVO PEDIDO / PUNTO DE VENTA -->
+        <section id="nuevo-pedido" class="seller-section">
+            <div class="section-header">
+                <h2>Nuevo Pedido</h2>
+                <p>Registra una venta rápidamente seleccionando prendas y datos del cliente.</p>
+            </div>
+
+            <div class="pos-grid">
+                <!-- Selector de Productos -->
+                <div class="pos-catalog">
+                    <h3>Seleccionar Productos</h3>
+                    <div class="product-selector-grid">
+                        <div class="product-item">
+                            <img src="producto1.jpg" alt="Vestido Elegante">
+                            <h5>Vestido Noche Rosa</h5>
+                            <p class="price">$ 120.000</p>
+                            <button class="btn btn-secondary btn-sm">+ Agregar</button>
+                        </div>
+                        <div class="product-item">
+                            <img src="producto2.jpg" alt="Blusa Seda">
+                            <h5>Blusa Satinada</h5>
+                            <p class="price">$ 65.000</p>
+                            <button class="btn btn-secondary btn-sm">+ Agregar</button>
+                        </div>
+                        <div class="product-item">
+                            <img src="producto3.jpg" alt="Pantalón Tiro Alto">
+                            <h5>Pantalón Blanco</h5>
+                            <p class="price">$ 95.000</p>
+                            <button class="btn btn-secondary btn-sm">+ Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Detalle del Pedido / Carrito de Venta -->
+                <div class="pos-cart">
+                    <h3>Resumen del Pedido</h3>
+                    
+                    <div class="client-select">
+                        <label for="client">Cliente:</label>
+                        <select id="client" class="form-input">
+                            <option value="">-- Seleccionar Cliente --</option>
+                            <option value="1">Laura Gómez (CC: 1098...)</option>
+                            <option value="2">María Rodríguez (CC: 1090...)</option>
+                            <option value="new">+ Registrar Nuevo Cliente</option>
+                        </select>
+                    </div>
+
+                    <div class="cart-items">
+                        <div class="cart-row">
+                            <span>1x Vestido Noche Rosa</span>
+                            <strong>$ 120.000</strong>
+                        </div>
+                        <div class="cart-row">
+                            <span>1x Blusa Satinada</span>
+                            <strong>$ 65.000</strong>
+                        </div>
+                    </div>
+
+                    <div class="cart-total">
+                        <span>Total:</span>
+                        <strong class="total-price">$ 185.000</strong>
+                    </div>
+
+                    <button class="btn btn-primary btn-block">Confirmar Venta</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: MIS VENTAS RECIENTES -->
+        <section id="mis-ventas" class="seller-section">
+            <div class="section-header">
+                <h2>Mis Ventas Recientes</h2>
+            </div>
+            
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>ID Venta</th>
+                            <th>Cliente</th>
+                            <th>Fecha</th>
+                            <th>Total</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#PED-1042</td>
+                            <td>Laura Gómez</td>
+                            <td>Hoy, 14:30</td>
+                            <td>$ 185.000</td>
+                            <td><span class="status-badge status-success">Completado</span></td>
+                        </tr>
+                        <tr>
+                            <td>#PED-1039</td>
+                            <td>Carlos Pérez</td>
+                            <td>Ayer, 18:10</td>
+                            <td>$ 95.000</td>
+                            <td><span class="status-badge status-warning">Pendiente</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SCRIPT PARA EL MENÚ DESPLEGABLE Y NAVEGACIÓN -->
+    <script>
+        // Toggle Menú Desplegable
+        const userMenuToggle = document.getElementById('userMenuToggle');
+        const userDropdown = document.getElementById('userDropdown');
+
+        userMenuToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            userDropdown.classList.toggle('show');
+        });
+
+        // Cerrar menú al hacer clic fuera
+        document.addEventListener('click', () => {
+            if (userDropdown.classList.contains('show')) {
+                userDropdown.classList.remove('show');
+            }
+        });
+
+        // Quitar foco de los enlaces del menú principal tras clic
+        document.querySelectorAll('header nav a').forEach(link => {
+            link.addEventListener('click', function() {
+                this.blur();
+            });
+        });
+
+        // Lógica para limpiar sesión al hacer clic en 'Cerrar Sesión'
+        const logoutBtn = document.querySelector('.logout-item');
+        if (logoutBtn) {
+            logoutBtn.addEventListener('click', function(e) {
+                // Limpiar cualquier almacenamiento de sesión activa
+                localStorage.clear();
+                sessionStorage.clear();
+            });
+        }
+    </script>
+</body>
+</html>
